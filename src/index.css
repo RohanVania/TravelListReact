@@ -131,6 +131,27 @@ input[type="checkbox"] {
    padding: 3.2rem 0;
 }
 
+@media screen and (max-width:1058px) {
+   .add-form {
+      flex-direction: column;
+      gap: 2rem;
+   } 
+   
+   select,input,button{
+      border-radius: 20px;
+      width: 50%;
+   }
+   .buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+   }
+}
+
+
+
 @media screen and (max-width: 790px) {
    h1 {
       font-size: 4rem;
@@ -138,10 +159,7 @@ input[type="checkbox"] {
    h3 {
       margin-block: 1rem;
    }
-   .add-form {
-      flex-direction: column;
-      gap: 2rem;
-   }
+  
    select,
    input,
    button {
@@ -158,5 +176,12 @@ input[type="checkbox"] {
       display: flex;
       justify-content: center;
       align-items: center;
+   }
+}
+
+
+@media screen and (max-width:460px) {
+   .text-center{
+      text-align: center;
    }
 }

@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+This project you can use for your travel list packaging list.
+
+In this project you will learn about states,props, parent to child communication, child to parent communication, child to child communication using lifting state up, concept of derived state.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
