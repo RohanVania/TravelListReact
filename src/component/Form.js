@@ -1,8 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import {addItem} from "../action/action"
 
-function Form({ onAddItems }) {
+function Form() {
+    
+    const state=useSelector((state)=>state);
+    const dispatch=useDispatch();
 
+    console.log("Redux =>",state)
+    
     const [formdata, setFormData] = useState({
         description: '', quantity: Number(1), packed: false
     })
@@ -15,13 +22,15 @@ function Form({ onAddItems }) {
         event.preventDefault();
 
         if (formdata.description === "") {
+            console.log("rigb")
             setFormData((prev) => {
                 return { ...prev, description: "", quantity: "", id: Date.now() }
-            })   
+            }) 
             return
         }
 
-        onAddItems(formdata)
+        dispatch(addItem(formdata))
+
         setFormData((prev) => {
             return { ...prev, description: "", quantity: "", id: Date.now() }
         })
