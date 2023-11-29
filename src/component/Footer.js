@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 function Footer() {
 
     const globalstorestate=useSelector((state)=>state);
+    console.log("Footer =>",globalstorestate)
     const itemslength=globalstorestate.items;
 
 
