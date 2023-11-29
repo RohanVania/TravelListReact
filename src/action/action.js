@@ -1,4 +1,4 @@
-import { ADD_ITEM,DELETE_ITEM,TOGGLE_ITEM,CLEAR_LIST } from "../actionTypes/actionType"
+import { ADD_ITEM,DELETE_ITEM,TOGGLE_ITEM,CLEAR_LIST,FORM_SLICE_CHANGE } from "../actionTypes/actionType"
 
 const addItem=(data)=>{
     return {
@@ -27,4 +27,11 @@ const clearList=()=>{
     }
 }
 
-export {addItem,deleteItem,togglePacked,clearList}
+const changeformslice=(data)=>{
+    return {
+        type:FORM_SLICE_CHANGE,
+        payload:data
+    }
+}
+
+export {addItem,deleteItem,togglePacked,clearList,changeformslice}

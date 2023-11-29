@@ -1,7 +1,17 @@
 import { legacy_createStore as createStore} from 'redux'
-import FormReducer from './reducers/FormReducer';
+import { combineReducers } from 'redux';
 
-const store=createStore(FormReducer);
+import FormReducer from './reducers/FormReducer';
+import FormSlice from "./reducers/FormSlice";
+
+const rootReducer=combineReducers({
+    items:FormReducer,
+    singleItem:FormSlice
+})
+
+const store=createStore(rootReducer);
+
+
 
 export default store;
 
